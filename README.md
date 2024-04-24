@@ -95,7 +95,7 @@ Bringing machine 'grub2' up with 'virtualbox' provider...
 
 Открываем GUI VirtualBox, запускаем виртуальную машину и при выборе ядра для загрузки нажимаем e - в данном контексте edit. Попадаем в окно, где мы можем изменить параметры загрузки:
 
-    ![Альтернативный текст](https://drive.google.com/file/d/1PNH49n3dMKj0FRh2KLi3F6HAB6AsMMGk/view?usp=drive_link)
+    ![Альтернативный текст](/home/adminkonstantin/Изображения/Снимки\ экрана/Screen1.png)
 
 ### **Способ 1. init=/bin/sh** ###
 
