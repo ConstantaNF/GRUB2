@@ -144,10 +144,10 @@ mount -o remount,rw /
 
 Перезагружаемся и заходим с новым паролем.
 
-### **Способ 3. rw init=/sysroot/bin/sh** ###
+### **Способ 3. rw init=/sysroot/bin/bash** ###
 
 Альтернативный сопсоб для дистрибутива Centos 7,8.
-В строке, начинающейся с linux16, заменяем ro на rw init=/sysroot/bin/sh, в конце строки добавляем console=tty0 и нажимаем сtrl-x для загрузки в систему:
+В строке, начинающейся с linux16, заменяем ro на rw init=/sysroot/bin/bash, в конце строки добавляем console=tty0 и нажимаем сtrl-x для загрузки в систему:
 
 ![изображение](https://github.com/ConstantaNF/GRUB2/assets/162187256/f71d657e-f86a-47df-9c5c-4c79183de7e9)
 
