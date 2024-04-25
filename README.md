@@ -98,13 +98,14 @@ Bringing machine 'grub2' up with 'virtualbox' provider...
 Ubuntu
 ![изображение](https://github.com/ConstantaNF/GRUB2/assets/162187256/c900ed03-e070-4db0-885e-81b6e359cce4)
 
-Centos
-![изображение](https://github.com/ConstantaNF/GRUB2/assets/162187256/220d654e-02a9-4018-8e96-5cec4d243054)
+Centos![изображение](https://github.com/ConstantaNF/GRUB2/assets/162187256/2a7b6f14-c172-43cd-964b-3c48e135bc74)
 
-### **Способ 1. init=/bin/sh** ###
+
+
+### **Способ 1. init=/bin/bash** ###
 
 Данный способ актуален для Debian/Ubuntu дистрибутивов.
-В конце строки, начинающейся с linux добавляем init=/bin/sh и нажимаем сtrl-x для загрузки в систему
+В конце строки, начинающейся с linux добавляем init=/bin/bash и нажимаем сtrl-x для загрузки в систему
 
 ![изображение](https://github.com/ConstantaNF/GRUB2/assets/162187256/16499765-1033-41b0-8fd5-1bf41beeee71)
 
@@ -125,7 +126,7 @@ mount -o remount,rw /
 
 ![изображение](https://github.com/ConstantaNF/GRUB2/assets/162187256/21a39080-5204-4cd3-9ffe-0a7baaf13234)
 
-c
+### **Способ 2. rd.break** ###
 
 Данный способ актуален для Centos.
 В конце строки, начинающейся с linux16, добавляем rd.break console=tty0 и нажимаем сtrl-x для загрузки в систему:
