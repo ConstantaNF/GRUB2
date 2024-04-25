@@ -94,10 +94,68 @@ Bringing machine 'grub2' up with 'virtualbox' provider...
 ### **Попасть в систему без пароля несколькими способами** ###
 
 Открываем GUI VirtualBox, запускаем виртуальную машину и при выборе ядра для загрузки нажимаем e - в данном контексте edit. Попадаем в окно, где мы можем изменить параметры загрузки:
-![изображение](https://github.com/ConstantaNF/GRUB2/assets/162187256/00d9c74a-5980-4acf-8fd1-6bbb2eab3c49)
 
+Ubuntu
+![изображение](https://github.com/ConstantaNF/GRUB2/assets/162187256/c900ed03-e070-4db0-885e-81b6e359cce4)
+
+Centos
+![изображение](https://github.com/ConstantaNF/GRUB2/assets/162187256/220d654e-02a9-4018-8e96-5cec4d243054)
 
 ### **Способ 1. init=/bin/sh** ###
 
-В конце строки, начинающейся с linux16, добавляем init=/bin/sh и нажимаем сtrl-x для загрузки в систему
+Данный способ актуален для Debian/Ubuntu дистрибутивов.
+В конце строки, начинающейся с linux добавляем init=/bin/sh и нажимаем сtrl-x для загрузки в систему
+
+![изображение](https://github.com/ConstantaNF/GRUB2/assets/162187256/16499765-1033-41b0-8fd5-1bf41beeee71)
+
+Мы попали в систему:
+
+![изображение](https://github.com/ConstantaNF/GRUB2/assets/162187256/0b15247e-b1b2-4988-9ecd-834a3ae2a125)
+
+
+Рутовая файловая система при этом монтируется в режиме Read-Only. Если мы хотим перемонтировать ее в режим Read-Write, можно воспользоваться командой:
+
+```
+mount -o remount,rw /
+```
+
+![изображение](https://github.com/ConstantaNF/GRUB2/assets/162187256/6cd05caf-2827-46af-9454-4e30b872ec04)
+
+Убедимся в этом записав данные в любой файл:
+
+![изображение](https://github.com/ConstantaNF/GRUB2/assets/162187256/21a39080-5204-4cd3-9ffe-0a7baaf13234)
+
+c
+
+Данный способ актуален для Centos.
+В конце строки, начинающейся с linux16, добавляем rd.break console=tty0 и нажимаем сtrl-x для загрузки в систему:
+
+![изображение](https://github.com/ConstantaNF/GRUB2/assets/162187256/09caa030-11c3-4ce4-bd6e-bd6cc5fb171f)
+
+ Попадаем в emergency mode. Наша корневая файловая система смонтирована (опять же в режиме Read-Only, но мы не в ней). 
+
+![изображение](https://github.com/ConstantaNF/GRUB2/assets/162187256/364ea54b-9168-4e16-8a37-0d3d78d7d709)
+
+Далее пробуем попасть в нее и поменять пароль администратора:
+
+![изображение](https://github.com/ConstantaNF/GRUB2/assets/162187256/5d5f7c41-5eb5-4c62-8a07-cf297ac7fdc8)
+
+Перезагружаемся и заходим с новым паролем.
+
+### **Способ 3. rw init=/sysroot/bin/sh** ###
+
+Альтернативный сопсоб для дистрибутива Centos 7,8.
+В строке, начинающейся с linux16, заменяем ro на rw init=/sysroot/bin/sh, в конце строки добавляем console=tty0 и нажимаем сtrl-x для загрузки в систему:
+
+![изображение](https://github.com/ConstantaNF/GRUB2/assets/162187256/f71d657e-f86a-47df-9c5c-4c79183de7e9)
+
+Мы в системе и файловая система сразу смонтирована в режим Read-Write:
+
+![изображение](https://github.com/ConstantaNF/GRUB2/assets/162187256/16155898-486c-4f72-a382-837edb64b105)
+
+
+
+
+
+
 
