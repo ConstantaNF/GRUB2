@@ -96,7 +96,8 @@ Bringing machine 'grub2' up with 'virtualbox' provider...
 Открываем GUI VirtualBox, запускаем виртуальную машину и при выборе ядра для загрузки нажимаем e - в данном контексте edit. Попадаем в окно, где мы можем изменить параметры загрузки:
 
 Ubuntu
-![изображение](https://github.com/ConstantaNF/GRUB2/assets/162187256/c900ed03-e070-4db0-885e-81b6e359cce4)
+![изображение](https://github.com/ConstantaNF/GRUB2/assets/162187256/d5a8aead-4ba6-417c-8e23-6eab8e094bdc)
+
 
 Centos![изображение](https://github.com/ConstantaNF/GRUB2/assets/162187256/2a7b6f14-c172-43cd-964b-3c48e135bc74)
 
